@@ -1,0 +1,121 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f8f8f8, #e0e0e0);
+  animation: gradient 5s ease infinite;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  font-size: 2em;
+  letter-spacing: 0.1em;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 2em;
+}
+
+.tracking-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 900px;
+  width: 100%;
+}
+
+.text-section {
+  max-width: 500px;
+  margin-left: 2em;
+}
+
+.text-section h2 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+form {
+  display: flex;
+  gap: 1em;
+}
+
+input, button {
+  padding: 0.5em;
+  font-size: 1em;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+footer {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#truck-img {
+  max-width: 400px;
+  width: 100%;
+  animation: bounce 2s infinite;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-20px);
+  }
+  60% {
+      transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .tracking-section {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .text-section {
+      margin-left: 0;
+      text-align: center;
+  }
+
+  #truck-img {
+      max-width: 250px;
+  }
+}
